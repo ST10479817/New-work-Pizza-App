@@ -2,9 +2,9 @@ name: Android CI
 
 on:
   push:
-    branches: [ main ]  # Trigger on push to main branch
+    branches: [ main ]
   pull_request:
-    branches: [ main ]  # Trigger on pull request to main branch
+    branches: [ main ]
 
 jobs:
   build:
@@ -21,13 +21,13 @@ jobs:
         java-version: '17'
 
     - name: List directory contents
-      run: ls -R # This will list all the files in your repository to check gradlew path
+      run: ls -R # This will list all files to check gradlew's location
 
     - name: Grant execute permission for Gradlew
       run: chmod +x ./gradlew # Ensure this points to the gradlew file in the root directory
 
     - name: Build Project
-      run: ./gradlew build # Ensure this command runs the Gradle build with the gradlew file
+      run: ./gradlew build
 
     - name: Run Tests
-      run: ./gradlew test # Run tests with gradlew file
+      run: ./gradlew test
