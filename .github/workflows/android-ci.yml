@@ -21,10 +21,10 @@ jobs:
         java-version: '17'
 
     - name: Grant execute permission for Gradlew
-      run: chmod +x gradlew
+      run: chmod +x ./gradlew  # Path to gradlew in the root directory
 
     - name: Build Project
-      run: ./gradlew build
+      run: ./gradlew build  # Path to gradlew in the root directory
 
     - name: Run Tests
-      run: ./gradlew test
+      run: ./gradlew test  # Path to gradlew in the root directory
